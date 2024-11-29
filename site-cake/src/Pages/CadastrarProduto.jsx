@@ -14,9 +14,7 @@ const urlTipo = "http://localhost:5000/Tipos";
 const urlProd = "http://localhost:5000/Produtos";
 
 const CadastrarProduto = () => {
-  //Lista com categorias
   const [tipos, setTipos] = useState([]);
-  //UseEffect pra puxar os dados da api
   useEffect(() => {
     async function fetchData() {
       try {
@@ -31,28 +29,22 @@ const CadastrarProduto = () => {
     fetchData();
   }, []);
 
-  //Link produto sem imagem
+
   const linkImagem =
     "https://www.malhariapradense.com.br/wp-content/uploads/2017/08/produto-sem-imagem.png";
 
-  //Variáveis para o produto
   const [nome, setNome] = useState("");
   const [descricao, setDescricao] = useState("");
   const [tipo, setTipo] = useState("Bolo");
   const [preco, setPreco] = useState("");
   const [imagemUrl, setImagemUrl] = useState("");
 
-  //Variáveis para o alerta
   const [alertClass, setAlertClass] = useState("mb-3 d-none");
   const [alertMensagem, setAlertMensagem] = useState("");
   const [alertVariant, setAlertVariant] = useState("danger");
 
-  // Criando o navigate
   const navigate = useNavigate();
-
-  //Função pra lidar com o envio dos dados
   const handleSubmit = async (e) => {
-    //Previne a página de ser recarregada
     e.preventDefault();
 
     if (nome != "") {

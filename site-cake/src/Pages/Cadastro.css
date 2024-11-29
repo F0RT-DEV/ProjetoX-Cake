@@ -1,8 +1,8 @@
-.login-background {
-    background: linear-gradient(135deg, #f0f4f8, #e1e9f0);
+.cadastro-background {
+  background-color: #ffcbdb;
   }
   
-  .login-form {
+  .cadastro-form {
     background: white;
     border-radius: 10px;
     padding: 30px;
@@ -10,10 +10,13 @@
     width: 40%;
   }
   
-  .login-form h2 {
+  .cadastro-form h2 {
     color: #333;
   }
-  
+  .btn1{
+    width: 40%;
+    margin-left: 140px;
+  }
   .login-form .form-control {
     border-radius: 5px;
   }
@@ -25,9 +28,4 @@
   
   .login-form .btn-primary:hover {
     background-color: #0056b3;
-  }
-
-  button{
-    justify-content: center;
-    align-items: center;
   }

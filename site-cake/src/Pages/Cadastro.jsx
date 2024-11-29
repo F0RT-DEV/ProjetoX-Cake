@@ -101,7 +101,7 @@ const Cadastro = () => {
             <Alert variant={alertVariant} className={alertClass}>
               {alertMensagem}
             </Alert>
-            <Button variant="primary" type="submit" className="w-100">
+            <Button variant="primary" type="submit" className="btn1">
               Cadastrar
             </Button>
           </Form>

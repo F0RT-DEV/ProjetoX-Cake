@@ -1,13 +1,11 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import 'bootstrap/dist/css/bootstrap.min.css'; // Certifique-se de que o Bootstrap está importado
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CardProdutos = (props) => {
   const handleDelete = async (e) => {
     const req = await fetch(`http://localhost:5000/Produtos/${props.id}`, 
-    {
-      method:"DELETE"
-    });
+    {method:"DELETE"});
     const res = await req.json();
     console.log(res);
     alert(`Produto ${res.nome} removido`);
@@ -32,8 +30,8 @@ const CardProdutos = (props) => {
             <Card.Link href={`/produto/Editar/${props.id}`}>
               <Button variant="warning">Editar</Button>
             </Card.Link>
-            <Card.Link href="/home">
-              <Button variant="danger" onClick={handleDelete}>
+            <Card.Link>
+              <Button variant="danger" type="button" onClick={handleDelete}>
                 Excluir
               </Button>
             </Card.Link>

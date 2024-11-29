@@ -26,9 +26,9 @@ const Home = () => {
   return (
     <div>
     <BarraNavegacao />
-      <h1 style={{textAlign:"center"}}>Lista de produtos</h1>
-      <Container>
-        <div className="lista-produtos d-flex col-12 gap-5 mt-3 justify-content-center flex-wrap">
+      <h1 style={{textAlign:"center", marginTop:"50px", alignItems:"center"}}>Lista de produtos</h1>
+      <Container style={{marginTop:"70px"}}>
+        <div className="lista-produtos d-flex col-12 gap-5 mt-12 justify-content-center flex-wrap" style={{color:"#ffcbdb"}}>
           {produtos.map((prod) => (
             <CardProdutos
               key={prod.id}

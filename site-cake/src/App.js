@@ -5,6 +5,7 @@ import EditarProduto from './Pages/EditarProduto'
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Cadastro from './Pages/Cadastro'
+import './App.css';
 
 function App() {
   return (

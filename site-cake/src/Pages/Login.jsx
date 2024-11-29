@@ -9,8 +9,7 @@ import './Login.css';
 const url = "http://localhost:5000/usuarios"
 
 const Login = () => {
-  localStorage.removeItem("userName")
-  localStorage.removeItem("email")
+  
   
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -47,7 +46,7 @@ const Login = () => {
     e.preventDefault();
 
     const userToFind = usuarios.find(
-      (user)=>user.email == email
+      (user)=>user.email === email
     )
     if (email != "") {
       if (senha != "") {
@@ -76,10 +75,10 @@ const Login = () => {
 }
   return (
     <div className="login-background">
-      <Container className="d-flex justify-content-center align-items-center" style={{ height: "100vh"}}>
+      <Container className="d-flex justify-content-center align-items-center" style={{ height: "100vh",}}>
         <div className="login-form">
-          <i className="bi bi-box-arrow-in-right" style={{ fontSize: "100px", marginBottom: "20px", color: "#007bff", marginRight:"22px"}}></i>
-          <h2 className="mb-4">Seja bem vindo!</h2>
+          <i className="bi bi-box-arrow-in-right" style={{ fontSize: "100px", marginBottom: "20px", color: "#007bff", marginLeft:"159px"}}></i>
+          <h2 className="icons mb-4">Seja bem vindo!</h2>
           <Form onSubmit={handleLogin}>
             <Form.Group className="mb-3" controlId="formBasicEmail" style={{textAlign:"left"}}>
               <Form.Label>Email</Form.Label>
@@ -96,12 +95,12 @@ const Login = () => {
             <Alert variant={alertVariant} className={alertClass}>
             {alertMensagem}
             </Alert>
-            <Button variant="primary" type="submit" className="w-30">
+            <Button variant="primary" type="submit" className="btn2">
               Entrar
             </Button>
           </Form>
           <div className="text-center mt-3">
-            <p>Não possui conta? <a href="/Cadastrar">Então cadastre-se pó</a></p>
+            <p>Não possui conta? <a href="/Cadastrar">Então cadastre-se logo ai</a></p>
           </div>
         </div>
       </Container>
